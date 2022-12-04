@@ -1,5 +1,6 @@
 import Copy from "./components/Copy.js";
 import Holidays from "./components/Holidays.js";
+import Period from "./components/Period.js";
 import Time from "./components/Time.js";
 
 import {
@@ -9,6 +10,7 @@ import {
   holidays,
   newYear,
   newYearDate,
+  page,
   site,
   status,
   today,
@@ -19,6 +21,9 @@ import {
 // Выдаем ссылку:
 site.textContent = site.href = window.location.href;
 
+// Картинки при смене года:
+page.style.backgroundImage = `url(./images/${Period()}.gif)`;
+
 // День Рождения:
 const filterHolidays = holidays.filter(date => 
   date.day === today.getDate() && date.month === today.getMonth()
@@ -27,7 +32,7 @@ const filterHolidays = holidays.filter(date =>
 const happyDay = new Holidays(filterHolidays, happy).getDayText();
 happy.textContent = happyDay;
 
-// Время
+// Время:
 const time = new Time(today);
 
 const textDateWar = time.handleDay(warDate);

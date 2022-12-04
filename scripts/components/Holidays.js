@@ -12,7 +12,7 @@ export default class Holidays {
 
       this.happy.style.display = 'inline';
 
-      return `С Днём Рождения, ${mapHolidays.join(', ')}`;
+      return `С Днём Рождения, ${mapHolidays.join(', ')}!`;
     } else {
       this.happy.style.display = 'none';
       

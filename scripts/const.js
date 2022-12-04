@@ -1,4 +1,5 @@
 // Элементы:
+export const page = document.querySelector('.page');
 export const newYear = document.querySelector('.newYear');
 export const war = document.querySelector('.war');
 export const days = document.querySelector('.days');
